@@ -10,7 +10,7 @@ public abstract class AbstractLocality {
         this.name = name;
     }
 
-    public abstract void manager();
+    public abstract void searchByLeader();
 
     public String getLeader() {
         return leader;

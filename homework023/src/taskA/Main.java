@@ -1,27 +1,24 @@
 package taskA;
 
-import taskA.city.bishkek.CityBishkek;
-import taskA.city.karakol.CityKarakol;
-import taskA.city.osh.CityOsh;
-import taskA.village.VillageKashkaSuu;
-import taskA.village.VillageKoyTash;
+import taskA.city.City;
+import taskA.village.Village;
 
 public class Main {
 
     public static void main(String[] args) {
-	AbstractLocality bishkek = new CityBishkek();
-	bishkek.manager();
+	AbstractLocality bishkek = new City();
+	bishkek.searchByLeader();
 
-	AbstractLocality osh = new CityOsh();
-	osh.manager();
+	AbstractLocality osh = new City();
+	osh.searchByLeader();
 
-	AbstractLocality karakol = new CityKarakol();
-	karakol.manager();
+	AbstractLocality karakol = new City();
+	karakol.searchByLeader();
 
-	AbstractLocality kashkaSuu = new VillageKashkaSuu();
-	kashkaSuu.manager();
+	AbstractLocality kashkaSuu = new Village();
+	kashkaSuu.searchByLeader();
 
-	AbstractLocality koyTash = new VillageKoyTash();
-	koyTash.manager();
+	AbstractLocality koyTash = new Village();
+	koyTash.searchByLeader();
     }
 }
