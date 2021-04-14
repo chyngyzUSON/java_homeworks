@@ -10,9 +10,9 @@ public class HibernateUtil {
     private static SessionFactory buildSessionFactory() {
         try {
             return new Configuration().configure().buildSessionFactory();
-        } catch (Exception e) {
-            System.err.println("SessionFactory not created" + e.getMessage());
-            throw new ExceptionInInitializerError(e);
+        } catch (Exception ex) {
+            System.out.println("SessionFactory not created" + ex.getMessage());
+            throw new ExceptionInInitializerError(ex);
         }
     }
 
@@ -20,7 +20,7 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-    public static void shutdown() {
+    public static void shutdown(){
         sessionFactory.close();
     }
 }
