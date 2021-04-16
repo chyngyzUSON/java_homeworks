@@ -4,15 +4,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
-
     private static final SessionFactory sessionFactory = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
         try {
             return new Configuration().configure().buildSessionFactory();
-        } catch (Exception ex) {
-            System.out.println("SessionFactory not created" + ex.getMessage());
-            throw new ExceptionInInitializerError(ex);
+        } catch (Exception e) {
+            System.err.println("SessionFactory not created" + e.getMessage());
+            throw new ExceptionInInitializerError(e);
         }
     }
 
@@ -20,7 +19,7 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-    public static void shutdown(){
+    public static void shutdown() {
         sessionFactory.close();
     }
 }
