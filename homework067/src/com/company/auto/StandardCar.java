@@ -1,6 +1,5 @@
-package com.company.childauto;
+package com.company.auto;
 
-import com.company.Auto;
 import com.company.impl.StandardFillStrategy;
 
 public class StandardCar extends Auto {

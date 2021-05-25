@@ -1,6 +1,6 @@
-package com.company;
+package com.company.auto;
 
-import com.company.impl.StandardFillStrategy;
+import com.company.FillStrategy;
 
 public class Auto {
     // используем интерфейс в качестве поля

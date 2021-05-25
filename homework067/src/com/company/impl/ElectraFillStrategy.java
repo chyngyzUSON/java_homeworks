@@ -5,6 +5,6 @@ import com.company.FillStrategy;
 public class ElectraFillStrategy implements FillStrategy {
     @Override
     public void fill() {
-        System.out.println("Зарядка электричеством!");
+        System.out.println("заряжаем электричеством!");
     }
 }

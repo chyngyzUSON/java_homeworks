@@ -1,7 +1,8 @@
 package com.company;
 
-import com.company.childauto.ElectricCar;
-import com.company.childauto.StandardCar;
+import com.company.auto.ElectricCar;
+import com.company.auto.StandardCar;
+import com.company.auto.Auto;
 
 public class Main {
 
@@ -10,7 +11,18 @@ public class Main {
         Auto tesla = new ElectricCar();
         Auto lada = new StandardCar();
 
+        System.out.println("Tesla Model S");
+        tesla.gas();
+        tesla.stop();
+        System.out.print("Электромобил Tesla ");
         tesla.fill();
+
+        System.out.println();
+
+        System.out.println("Lada Sedan");
+        lada.gas();
+        lada.stop();
+        System.out.print("обычную машину ");
         lada.fill();
     }
 }
